@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --slate-950: #0a0f1a;
+  --slate-600: #475569;
+  --slate-100: #f1f5f9;
+  --white: #ffffff;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --emerald-500: #10b981;
+  --amber-500: #f59e0b;
+  --rose-500: #f43f5e;
+}
+
+body {
+  color: var(--slate-950);
+  background: var(--slate-100);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.dot-grid-bg {
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 24px 24px;
+}

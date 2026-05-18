@@ -1,0 +1,147 @@
+import { Assessment } from '@/types';
+
+export const mockAssessments: Record<string, Assessment> = {
+  'CLM-2024-001': {
+    claimId: 'CLM-2024-001',
+    damageClassification: [
+      { area: 'Rear bumper', severity: 'Moderate', type: 'Dent', confidence: 94 },
+      { area: 'Trunk lid', severity: 'Minor', type: 'Scratch', confidence: 91 },
+      { area: 'Tail light (left)', severity: 'Severe', type: 'Structural', confidence: 89 },
+    ],
+    costBreakdown: [
+      { item: 'Rear bumper replacement', laborHours: 3, laborRate: 85, partsCost: 450, subtotal: 705 },
+      { item: 'Trunk lid repair & repaint', laborHours: 4, laborRate: 85, partsCost: 180, subtotal: 520 },
+      { item: 'Tail light assembly replacement', laborHours: 1.5, laborRate: 85, partsCost: 320, subtotal: 447.5 },
+      { item: 'Paint matching & blend', laborHours: 2, laborRate: 95, partsCost: 120, subtotal: 310 },
+      { item: 'Alignment check', laborHours: 1, laborRate: 85, partsCost: 0, subtotal: 85 },
+    ],
+    policyTierAdjustment: {
+      tier: 'Premium — Full Coverage',
+      coveragePercent: 90,
+      deductible: 500,
+    },
+    aiReasoning: 'Rear-end collision damage is consistent with reported incident. Impact pattern suggests low-to-moderate speed collision (~15-25 mph). Structural integrity of the frame appears intact based on visible damage patterns. Tail light damage requires full assembly replacement due to housing crack. Bumper shows compression damage beyond paintless dent repair threshold.',
+    flags: [],
+    totalEstimate: 4250,
+    coveredAmount: 3325,
+    outOfPocket: 925,
+  },
+  'CLM-2024-002': {
+    claimId: 'CLM-2024-002',
+    damageClassification: [
+      { area: 'Hood', severity: 'Moderate', type: 'Dent', confidence: 62 },
+      { area: 'Roof', severity: 'Moderate', type: 'Dent', confidence: 55 },
+      { area: 'Front windshield', severity: 'Minor', type: 'Scratch', confidence: 48 },
+      { area: 'Driver door', severity: 'Minor', type: 'Dent', confidence: 61 },
+    ],
+    costBreakdown: [
+      { item: 'Hood paintless dent repair', laborHours: 6, laborRate: 95, partsCost: 0, subtotal: 570 },
+      { item: 'Roof paintless dent repair', laborHours: 8, laborRate: 95, partsCost: 0, subtotal: 760 },
+      { item: 'Windshield treatment', laborHours: 1, laborRate: 85, partsCost: 60, subtotal: 145 },
+      { item: 'Door panel dent repair', laborHours: 3, laborRate: 95, partsCost: 0, subtotal: 285 },
+    ],
+    policyTierAdjustment: {
+      tier: 'Premium — Full Coverage',
+      coveragePercent: 90,
+      deductible: 500,
+    },
+    aiReasoning: 'Hail damage detected across multiple panels. Confidence is lower due to ambiguous damage extent — multiple overlapping impact areas make individual dent assessment challenging. Recommend human review to verify dent count and severity classification, particularly on the roof where image angle limits visibility.',
+    flags: ['Ambiguous damage extent — multiple overlapping impact areas', 'Low confidence on roof assessment due to image angle'],
+    totalEstimate: 1760,
+    coveredAmount: 1084,
+    outOfPocket: 676,
+  },
+  'CLM-2024-004': {
+    claimId: 'CLM-2024-004',
+    damageClassification: [
+      { area: 'Front bumper', severity: 'Moderate', type: 'Dent', confidence: 45 },
+      { area: 'Hood', severity: 'Minor', type: 'Scratch', confidence: 38 },
+      { area: 'Headlight (right)', severity: 'Minor', type: 'Scratch', confidence: 40 },
+    ],
+    costBreakdown: [
+      { item: 'Front bumper repair', laborHours: 3, laborRate: 95, partsCost: 380, subtotal: 665 },
+      { item: 'Hood scratch repair & repaint', laborHours: 2, laborRate: 95, partsCost: 140, subtotal: 330 },
+      { item: 'Headlight lens polishing', laborHours: 1, laborRate: 85, partsCost: 30, subtotal: 115 },
+    ],
+    policyTierAdjustment: {
+      tier: 'Standard — Collision Only',
+      coveragePercent: 80,
+      deductible: 1000,
+    },
+    aiReasoning: 'Front-end damage analysis reveals inconsistencies. Scratch patterns on hood appear to have different oxidation levels than bumper damage, suggesting potential pre-existing damage. Right headlight scratching pattern is inconsistent with reported collision angle. Recommend adjuster verify damage timeline.',
+    flags: ['Potential pre-existing damage detected', 'Inconsistent damage patterns'],
+    totalEstimate: 1110,
+    coveredAmount: 88,
+    outOfPocket: 1022,
+  },
+  'CLM-2024-006': {
+    claimId: 'CLM-2024-006',
+    damageClassification: [
+      { area: 'Front bumper', severity: 'Severe', type: 'Structural', confidence: 91 },
+      { area: 'Hood', severity: 'Moderate', type: 'Dent', confidence: 88 },
+      { area: 'Headlight (left)', severity: 'Severe', type: 'Structural', confidence: 93 },
+      { area: 'Front quarter panel (left)', severity: 'Minor', type: 'Scratch', confidence: 90 },
+    ],
+    costBreakdown: [
+      { item: 'Front bumper assembly replacement', laborHours: 4, laborRate: 85, partsCost: 1200, subtotal: 1540 },
+      { item: 'Hood replacement', laborHours: 5, laborRate: 85, partsCost: 900, subtotal: 1325 },
+      { item: 'Headlight assembly replacement', laborHours: 1.5, laborRate: 85, partsCost: 850, subtotal: 977.5 },
+      { item: 'Quarter panel scratch repair & repaint', laborHours: 2, laborRate: 95, partsCost: 110, subtotal: 300 },
+      { item: 'Alignment & calibration', laborHours: 2, laborRate: 95, partsCost: 0, subtotal: 190 },
+    ],
+    policyTierAdjustment: {
+      tier: 'Premium — Full Coverage',
+      coveragePercent: 90,
+      deductible: 750,
+    },
+    aiReasoning: 'Front-end collision damage is consistent with reported incident. Multiple structural components require replacement. Tesla-specific parts (bumper assembly, headlight) carry higher part costs than average. Alignment and ADAS sensor calibration required post-repair.',
+    flags: [],
+    totalEstimate: 5800,
+    coveredAmount: 4470,
+    outOfPocket: 1330,
+  },
+  'CLM-2024-007': {
+    claimId: 'CLM-2024-007',
+    damageClassification: [
+      { area: 'Driver door', severity: 'Minor', type: 'Dent', confidence: 97 },
+      { area: 'Driver door panel', severity: 'Minor', type: 'Scratch', confidence: 95 },
+    ],
+    costBreakdown: [
+      { item: 'Door dent repair (PDR)', laborHours: 2.5, laborRate: 85, partsCost: 0, subtotal: 212.5 },
+      { item: 'Door panel scratch repaint', laborHours: 2, laborRate: 85, partsCost: 120, subtotal: 290 },
+      { item: 'Paint blend & polish', laborHours: 1, laborRate: 95, partsCost: 60, subtotal: 155 },
+    ],
+    policyTierAdjustment: {
+      tier: 'Premium — Full Coverage',
+      coveragePercent: 90,
+      deductible: 500,
+    },
+    aiReasoning: 'Minor door damage consistent with parking lot impact from another vehicle. No structural damage detected. Paintless dent repair is viable for the dent. Scratch depth requires repaint rather than polish alone.',
+    flags: [],
+    totalEstimate: 657,
+    coveredAmount: 91,
+    outOfPocket: 566,
+  },
+  'CLM-2024-005': {
+    claimId: 'CLM-2024-005',
+    damageClassification: [
+      { area: 'Passenger door', severity: 'Moderate', type: 'Dent', confidence: 96 },
+      { area: 'Rear quarter panel', severity: 'Minor', type: 'Scratch', confidence: 94 },
+    ],
+    costBreakdown: [
+      { item: 'Door panel replacement', laborHours: 4, laborRate: 85, partsCost: 520, subtotal: 860 },
+      { item: 'Quarter panel scratch repair', laborHours: 2, laborRate: 85, partsCost: 90, subtotal: 260 },
+      { item: 'Paint matching & blend', laborHours: 1.5, laborRate: 95, partsCost: 110, subtotal: 252.5 },
+    ],
+    policyTierAdjustment: {
+      tier: 'Premium — Full Coverage',
+      coveragePercent: 90,
+      deductible: 500,
+    },
+    aiReasoning: 'Side-impact damage from T-bone collision at intersection. Damage is well-defined and consistent with reported incident. Door panel requires replacement due to depth of intrusion. Quarter panel scratching is superficial and repairable.',
+    flags: [],
+    totalEstimate: 1372,
+    coveredAmount: 735,
+    outOfPocket: 637,
+  },
+};

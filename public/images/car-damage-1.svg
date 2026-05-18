@@ -1,0 +1,15 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#e2e8f0"/>
+  <rect x="60" y="120" width="280" height="100" rx="20" fill="#94a3b8"/>
+  <rect x="80" y="100" width="80" height="60" rx="10" fill="#64748b"/>
+  <rect x="240" y="100" width="80" height="60" rx="10" fill="#64748b"/>
+  <circle cx="120" cy="230" r="25" fill="#475569"/>
+  <circle cx="280" cy="230" r="25" fill="#475569"/>
+  <circle cx="120" cy="230" r="12" fill="#334155"/>
+  <circle cx="280" cy="230" r="12" fill="#334155"/>
+  <!-- damage indicators -->
+  <path d="M270 130 L310 120 L290 150 L320 140" stroke="#ef4444" stroke-width="3" fill="none"/>
+  <circle cx="300" cy="135" r="15" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+  <text x="200" y="30" text-anchor="middle" font-family="system-ui" font-size="14" fill="#64748b">Rear-end Collision</text>
+  <text x="200" y="280" text-anchor="middle" font-family="system-ui" font-size="11" fill="#94a3b8">Placeholder Image</text>
+</svg>
