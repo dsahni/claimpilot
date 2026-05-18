@@ -133,6 +133,7 @@ export default function AdjusterClaimDetail() {
                 <div className="grid grid-cols-3 gap-3">
                   {claim.photos.map((photo, i) => (
                     <div key={i} className="aspect-square rounded-lg bg-slate-100 border border-slate-200 overflow-hidden">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={photo} alt={`Damage ${i + 1}`} className="w-full h-full object-cover" />
                     </div>
                   ))}

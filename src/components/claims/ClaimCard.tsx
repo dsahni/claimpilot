@@ -44,6 +44,7 @@ export default function ClaimCard({ claim, index }: ClaimCardProps) {
         <div className="flex gap-3 mb-3">
           <div className="w-16 h-16 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden flex-shrink-0">
             {claim.photos[0] ? (
+              // eslint-disable-next-line @next/next/no-img-element
               <img src={claim.photos[0]} alt="Damage" className="w-full h-full object-cover" />
             ) : (
               <span className="text-slate-400 text-xs">No photo</span>

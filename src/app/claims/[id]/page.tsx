@@ -278,6 +278,7 @@ export default function ClaimDetailPage() {
               <div className="grid grid-cols-4 gap-3">
                 {claim.photos.map((photo, i) => (
                   <div key={i} className="rounded-lg border border-slate-200 overflow-hidden bg-slate-100">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={photo}
                       alt={`Damage photo ${i + 1}`}
@@ -315,6 +316,7 @@ export default function ClaimDetailPage() {
                     <div className="grid grid-cols-4 gap-3 mb-4">
                       {newPhotoPreviews.map((preview, i) => (
                         <div key={i} className="relative rounded-lg border border-slate-200 overflow-hidden bg-slate-100">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img src={preview} alt={`New photo ${i + 1}`} className="w-full h-24 object-cover" />
                           <button
                             onClick={() => setNewPhotoPreviews(prev => prev.filter((_, j) => j !== i))}

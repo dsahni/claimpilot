@@ -67,6 +67,7 @@ export default function StepReview({ details, selectedSections, sectionPhotos }:
                   </div>
                   <div className="flex gap-1.5 flex-wrap">
                     {photos.map((photo, i) => (
+                      // eslint-disable-next-line @next/next/no-img-element
                       <img
                         key={i}
                         src={photo}

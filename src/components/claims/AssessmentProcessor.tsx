@@ -72,7 +72,6 @@ export default function AssessmentProcessor({ claimId }: AssessmentProcessorProp
               {phases.map((phase, i) => {
                 const isActive = i === currentPhase;
                 const isDone = i < currentPhase;
-                const isPending = i > currentPhase;
 
                 return (
                   <motion.div

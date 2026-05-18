@@ -139,6 +139,7 @@ function SectionPhotoCard({ label, photos, onPhotosChange, onRemove }: SectionPh
         <div className="flex gap-2 flex-wrap">
           {photos.map((photo, i) => (
             <div key={i} className="relative group">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={photo}
                 alt={`${label} photo ${i + 1}`}

@@ -45,11 +45,6 @@ function formatDate(dateStr: string) {
 export default function PolicyPage() {
   const p = mockPolicy;
 
-  const vehiclesByName = p.vehicles.reduce<Record<string, typeof p.vehicles[0]>>((acc, v) => {
-    acc[`${v.year} ${v.make} ${v.model}`] = v;
-    return acc;
-  }, {});
-
   const coveragesByVehicle = p.coverages.reduce<Record<string, typeof p.coverages>>((acc, c) => {
     if (!acc[c.vehicle]) acc[c.vehicle] = [];
     acc[c.vehicle].push(c);
